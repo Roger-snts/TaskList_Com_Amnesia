@@ -38,10 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
   late List pages;
 
   List<Map<String, dynamic>> fisicList = [
-    {"title": "Dark", "description": "WEB"},
-    {"title": "Mode", "description": "WEB"},
-    {"title": "rkMo", "description": "WEB"},
-    {"title": "kM", "description": "WEB"},
+    {"title": "Louças", "description": "Lavar as louças às 10AM."},
+    {"title": "Lixo", "description": "Amanhã é dia de coleta de lixo. Preciso retirá-lo hoje."},
+    {"title": "Passeio", "description": "Os cães estão começando a ficar entediados e agitados dentro de casa. Preciso passear com eles."},
+    {"title": "Prova de IOT", "description": "A semana de provas está chegando e eu ainda não estudei sobre os principais conceitos de IOT!"},
   ];
 
   @override
@@ -126,7 +126,7 @@ class _ListPageState extends State<ListPage> {
               tileColor: const Color(0xFF02735E),
               leading: const Icon(Icons.sticky_note_2_rounded,
                   color: Color(0xFFF27405)),
-              title: Text(widget.fisicList[index]["title"].toString()),
+              title: Text(widget.fisicList[index]["title"].toString(), style: const TextStyle(fontSize: 18, color: Colors.amberAccent),),
               subtitle: Text(widget.fisicList[index]["description"].toString()),
               trailing: IconButton(
                 onPressed: () => showDialog(
