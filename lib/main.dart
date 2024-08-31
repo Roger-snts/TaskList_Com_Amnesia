@@ -39,9 +39,20 @@ class _MyHomePageState extends State<MyHomePage> {
 
   List<Map<String, dynamic>> fisicList = [
     {"title": "Louças", "description": "Lavar as louças às 10AM."},
-    {"title": "Lixo", "description": "Amanhã é dia de coleta de lixo. Preciso retirá-lo hoje."},
-    {"title": "Passeio", "description": "Os cães estão começando a ficar entediados e agitados dentro de casa. Preciso passear com eles."},
-    {"title": "Prova de IOT", "description": "A semana de provas está chegando e eu ainda não estudei sobre os principais conceitos de IOT!"},
+    {
+      "title": "Lixo",
+      "description": "Amanhã é dia de coleta de lixo. Preciso retirá-lo hoje."
+    },
+    {
+      "title": "Passeio",
+      "description":
+          "Os cães estão começando a ficar entediados e agitados dentro de casa. Preciso passear com eles."
+    },
+    {
+      "title": "Prova de IOT",
+      "description":
+          "A semana de provas está chegando e eu ainda não estudei sobre os principais conceitos de IOT!"
+    },
   ];
 
   @override
@@ -126,29 +137,32 @@ class _ListPageState extends State<ListPage> {
               tileColor: const Color(0xFF02735E),
               leading: const Icon(Icons.sticky_note_2_rounded,
                   color: Color(0xFFF27405)),
-              title: Text(widget.fisicList[index]["title"].toString(), style: const TextStyle(fontSize: 18, color: Colors.amberAccent),),
+              title: Text(
+                widget.fisicList[index]["title"].toString(),
+                style: const TextStyle(fontSize: 18, color: Colors.amberAccent),
+              ),
               subtitle: Text(widget.fisicList[index]["description"].toString()),
               trailing: IconButton(
                 onPressed: () => showDialog(
                   context: context,
                   builder: (context) => CupertinoAlertDialog(
                     title: const Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.sentiment_very_satisfied,
-                                  color: Color(0xFF03A678),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 8.0, right: 8.0),
-                                  child: Text("AVISO"),
-                                ),
-                                Icon(
-                                  Icons.sentiment_very_satisfied,
-                                  color: Color(0xFF03A678),
-                                ),
-                              ],
-                            ),
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.sentiment_very_satisfied,
+                          color: Color(0xFF03A678),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 8.0, right: 8.0),
+                          child: Text("AVISO"),
+                        ),
+                        Icon(
+                          Icons.sentiment_very_satisfied,
+                          color: Color(0xFF03A678),
+                        ),
+                      ],
+                    ),
                     content: const Padding(
                       padding: EdgeInsets.all(20.0),
                       child: Text("Marcar esta tarefa como concluída?"),
@@ -257,7 +271,8 @@ class _CreateListItemState extends State<CreateListItem> {
                                   color: Color(0xFF03A678),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(left: 8.0, right: 8.0),
+                                  padding:
+                                      EdgeInsets.only(left: 8.0, right: 8.0),
                                   child: Text("SUCESSO"),
                                 ),
                                 Icon(
@@ -294,7 +309,8 @@ class _CreateListItemState extends State<CreateListItem> {
                                         color: Color(0xFFF27405),
                                       ),
                                       Padding(
-                                  padding: EdgeInsets.only(left: 8.0, right: 8.0),
+                                        padding: EdgeInsets.only(
+                                            left: 8.0, right: 8.0),
                                         child: Text("AVISO"),
                                       ),
                                       Icon(
